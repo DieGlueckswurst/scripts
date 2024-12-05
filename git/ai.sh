@@ -6,10 +6,5 @@ gaicAuto() {
 }
 
 gaic() {
-    # We assume that your project is in a directory with the word "bling" in it.
-    # If not, either rename your repo or find a more generic solution.
-    #
-    # Test this assumption by running the following command:
-    # $ j bling 
     gaicAuto
 }
