@@ -11,10 +11,5 @@ gaic() {
     #
     # Test this assumption by running the following command:
     # $ j bling 
-    if [[ $(basename "$(pwd)") == *bling* ]]; then
-        gaicAuto
-    else
-        j bling
-        gaicAuto
-    fi
+    gaicAuto
 }
