@@ -18,3 +18,7 @@ rmOldBranches() {
     fi
     done
 }
+
+rmMergeFiles() {
+    find . -name "*.orig" -type f -delete
+}
