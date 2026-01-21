@@ -22,3 +22,12 @@ rmOldBranches() {
 rmMergeFiles() {
     find . -name "*.orig" -type f -delete
 }
+
+openxcode() {
+    if [ -f "ios/Runner.xcworkspace/contents.xcworkspacedata" ]; then
+        open ios/Runner.xcworkspace
+        echo "Opening iOS workspace in Xcode..."
+    else
+        echo "Error: No iOS workspace found. Are you in a Flutter root directory?"
+    fi
+}
