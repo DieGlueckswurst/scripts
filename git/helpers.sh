@@ -53,6 +53,14 @@ gsync() {
         return 0
     fi
 
+    # Commit and push current changes first (if any)
+    git add .
+    if ! git diff --cached --quiet; then
+        echo "Committing and pushing current changes..."
+        git commit -m "chore: before sync with main"
+        git push
+    fi
+
     echo "Syncing $current_branch with $main_branch..."
 
     # Fetch all updates
